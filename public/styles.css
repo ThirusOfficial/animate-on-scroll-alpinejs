@@ -646,6 +646,18 @@ video {
 	padding-top: 4rem;
 	padding-bottom: 4rem;
 }
+.px-12 {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+.py-12 {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+.py-10 {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
 .text-center {
 	text-align: center;
 }
@@ -712,6 +724,101 @@ video {
          transform: scale(1);
       }
    }
+
+@layer components {
+   .wrapper {
+		margin-left: auto;
+		margin-right: auto;
+	}
+   .wrapper {
+		max-width: 72rem;
+	}
+   .btn {
+		display: inline-block;
+	}
+   .btn {
+		border-radius: 9999px;
+	}
+   .btn {
+		--tw-bg-opacity: 1;
+		background-color: rgba(186, 104, 200, var(--tw-bg-opacity));
+	}
+   .btn {
+		font-weight: 600;
+	}
+   .btn {
+		--tw-text-opacity: 1;
+		color: rgba(255, 255, 255, var(--tw-text-opacity));
+	}
+   .btn-md {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+   .btn-md {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+   .btn-lg {
+		padding-left: 2.25rem;
+		padding-right: 2.25rem;
+	}
+   .btn-lg {
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
+	}
+}
+
+@layer utilities {
+   @-webkit-keyframes fadeInUp {
+      from {
+         opacity: 0;
+         transform: translateY(50%);
+      }
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+   @keyframes fadeInUp {
+      from {
+         opacity: 0;
+         transform: translateY(50%);
+      }
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+   .fadeInUp {
+      -webkit-animation: fadeInUp 1.5s cubic-bezier(0, 0, 0.2, 1);
+              animation: fadeInUp 1.5s cubic-bezier(0, 0, 0.2, 1);
+   }
+   @-webkit-keyframes scale {
+      from {
+         opacity: 0;
+         transform: scale(0.8);
+      }
+      to {
+         opacity: 1;
+         transform: scale(1);
+      }
+   }
+   @keyframes scale {
+      from {
+         opacity: 0;
+         transform: scale(0.8);
+      }
+      to {
+         opacity: 1;
+         transform: scale(1);
+      }
+   }
+   .scale {
+      -webkit-animation: scale 1.5s cubic-bezier(0, 0, 0.2, 1);
+              animation: scale 1.5s cubic-bezier(0, 0, 0.2, 1);
+   }
+}
+
 @media (min-width: 640px) {
 
 	.sm\:px-6 {
@@ -724,6 +831,7 @@ video {
 		line-height: 2.5rem;
 	}
 }
+
 @media (min-width: 768px) {
 
 	.md\:col-span-6 {
@@ -775,6 +883,7 @@ video {
 		line-height: 1;
 	}
 }
+
 @media (min-width: 1024px) {
 
 	.lg\:col-span-5 {
