@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+   .wrapper {
+      @apply max-w-6xl mx-auto;
+   }
+   .btn {
+      @apply inline-block bg-primary text-white rounded-full font-semibold;
+   }
+   .btn-md {
+      @apply px-6 py-2;
+   }
+   .btn-lg {
+      @apply px-9 py-3;
+   }
+}
+
+@layer utilities {
+   @keyframes fadeInUp {
+      from {
+         opacity: 0;
+         transform: translateY(50%);
+      }
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+   .fadeInUp {
+      animation: fadeInUp 1.5s cubic-bezier(0, 0, 0.2, 1);
+   }
+   @keyframes scale {
+      from {
+         opacity: 0;
+         transform: scale(0.8);
+      }
+      to {
+         opacity: 1;
+         transform: scale(1);
+      }
+   }
+   .scale {
+      animation: scale 1.5s cubic-bezier(0, 0, 0.2, 1);
+   }
+}
